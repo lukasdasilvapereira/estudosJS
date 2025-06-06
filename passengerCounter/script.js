@@ -58,3 +58,40 @@ function invoke() {
 
 invoke();
 
+let lap1 = 34;
+let lap2 = 33;
+let lap3 = 36;
+
+// Create a function that logs out the sum of all the lap times
+
+function sumAll() {
+    let sum = lap1 + lap2 + lap3;
+    console.log(sum);
+}
+
+sumAll();
+
+// Create a function that increments the lapsCompleted variable by 1 each time it is called
+
+let lapsCompleted = 0;
+
+function incrementLap() {
+    lapsCompleted += 1;
+    console.log(lapsCompleted);
+}
+
+incrementLap();
+incrementLap();
+incrementLap();
+
+// Create a variable, message , that stores the string: "You have tree new notifications"
+
+let username = "per";
+
+let message = `You have three new notifications ${username}`;
+console.log(message);
+
+let myName = "Lucas";
+let greeting = "Hi, my name is";
+let myGreeting = `${greeting} ${myName}`;
+console.log(myGreeting);
