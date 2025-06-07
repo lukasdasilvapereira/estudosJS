@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            margin: 25px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        span {
+            display: block;
+            margin: 40px 0;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <span id="num1-el"></span>
+    <span id="num2-el"></span>
+    <br>
+    <button onclick="soma()">Add</button>
+    <button onclick="diminuir()">Subtract</button>
+    <button onclick="dividir()">Divide</button>
+    <button onclick="multiply()">Multiply</button>
+    <br>
+    <span id="sum-el">Sum:</span>
+    <script src="index.js"></script>
+</body>
+</html>
