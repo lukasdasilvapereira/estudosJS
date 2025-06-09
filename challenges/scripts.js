@@ -33,3 +33,43 @@ remove1Point();
 add3Points();
 
 console.log(myPoints);
+
+// CREATE TWO VARIABLES , FIRSTCARD AND SECOND CARD
+// SET THEIRS VALUES TO A RANDON NUMBER BETWEEN 2 AND 11
+
+// 2- CREATE A VARIABLE, SUM , AND SET IT TO THE SUM OF THE TWO CARDS
+
+let firstCard = 2
+let secondCard = 8
+
+let sum = firstCard + secondCard;
+console.log(sum)
+
+if(sum < 21) {
+    console.log("Do you want to draw a new card? 🙂");
+} else if (sum === 21) {
+    console.log("Wohoo! You've got a Blackjack! 🎉");
+} else {
+    console.log("You're out of the game! 😵");
+}
+
+// CHECK IF THE PERSON IS OLD ENOUGH TO ENTER THE CLUB (21)
+let age = 22;
+
+if(age <= 20) {
+    console.log("Sorry, you are not allowed to enter the club.");
+} else {
+    console.log("Welcome to the club! 🎉");
+}
+
+// CHECK IF THE PERSON IS ELEGIBLE FOR A BITHDAY CARD FROM THE KING! (100)
+
+let ages = 100;
+
+if(ages === 100) {
+    console.log("You get a birthday card from the King! 👑");
+} else if(ages < 100) {
+    console.log("Sorry, you are not eligible for a birthday card from the King.");
+} else {
+    console.log("You already received a birthday card from the King! 🎂");
+}
