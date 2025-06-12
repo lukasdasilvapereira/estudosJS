@@ -73,3 +73,21 @@ if(ages === 100) {
 } else {
     console.log("You already received a birthday card from the King! 🎂");
 }
+
+// LOOPS
+
+let cards = [7, 3, 9];
+
+for(let i = 0; i < cards.length; i++) {
+    console.log(cards[i]);
+}
+
+// RANDOM NUMBERS
+
+let randonNumber = Math.floor(Math.random() * 6)
+console.log(randonNumber);
+
+// MATH FLOOR
+
+let flooredNumber = Math.floor(4);
+console.log(flooredNumber);
