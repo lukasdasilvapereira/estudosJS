@@ -66,3 +66,46 @@ function totalRaceTime() {
 
 let total = totalRaceTime();
 console.log(total);
+
+// OPERATORS 
+
+let hasCompletedCourse = true
+let givesCertificate = true 
+
+if(hasCompletedCourse === true || givesCertificate === true) {
+    generateCertificate();
+} else {
+    console.log("You need to finish the course")
+}
+
+function generateCertificate() {
+    console.log("Generating certificate...")
+}
+
+// PART2
+
+let hasSolvedChallenge = false 
+let hasHintsLeft = false
+
+
+if (hasSolvedChallenge === false && hasHintsLeft === false) {
+    showSolution()
+}
+
+function showSolution() {
+    console.log("Showing the solution...")
+}
+
+// CREATE TWO BOOLEAN VARIABLES, LIKESDOCUMENTARIES AND LIKESSTARTUPS
+// USE AN OR STATEMENT (||) TO CALL RECOMMENDMOVIE() IF EITHER OF THOSE VARIABLES ARE TRUE
+
+let likesDocumentaries = true;
+let likesStartups = true;
+
+if(likesDocumentaries === true || likesStartups === true) {
+    recommendMovie()
+}
+
+function recommendMovie() {
+    console.log("Hey, check out this new film we think you will like!")
+}

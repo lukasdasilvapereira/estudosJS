@@ -91,3 +91,16 @@ console.log(randonNumber);
 
 let flooredNumber = Math.floor(4);
 console.log(flooredNumber);
+
+let randon = Math.floor( Math.random() * 6) + 1
+
+console.log(randon)
+
+// CREATE A FUNCTION , ROLLDICE() , THAT RETURNS A RANDON NUMBER BETWEEN 1 AND 6
+
+function rollDice() {
+    let roll = Math.floor(Math.random() * 6) + 1;
+    return roll 
+}
+
+rollDice();
