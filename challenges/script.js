@@ -85,3 +85,19 @@ if(dayOfMonth === 13 && weekDay === "Friday") {
 
 // ROCK PAPER AND SCISSOR
 
+let hands = ["Paper", "Rock", "Scissor"];
+let hands2 = ["Paper", "Rock", "Scissor"]
+
+function getHand1() {
+    let random = Math.floor(Math.random() * 3)
+    return hands[random]
+}
+
+function getHand2() {
+    let random = Math.floor(Math.random() * 3)
+    return hands2[random]
+}
+
+console.log(getHand1())
+console.log(getHand2())
+
