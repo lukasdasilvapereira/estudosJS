@@ -45,7 +45,7 @@ let secondCard = 8
 let sum = firstCard + secondCard;
 console.log(sum)
 
-if(sum < 21) {
+if (sum < 21) {
     console.log("Do you want to draw a new card? 🙂");
 } else if (sum === 21) {
     console.log("Wohoo! You've got a Blackjack! 🎉");
@@ -56,7 +56,7 @@ if(sum < 21) {
 // CHECK IF THE PERSON IS OLD ENOUGH TO ENTER THE CLUB (21)
 let age = 22;
 
-if(age <= 20) {
+if (age <= 20) {
     console.log("Sorry, you are not allowed to enter the club.");
 } else {
     console.log("Welcome to the club! 🎉");
@@ -66,9 +66,9 @@ if(age <= 20) {
 
 let ages = 100;
 
-if(ages === 100) {
+if (ages === 100) {
     console.log("You get a birthday card from the King! 👑");
-} else if(ages < 100) {
+} else if (ages < 100) {
     console.log("Sorry, you are not eligible for a birthday card from the King.");
 } else {
     console.log("You already received a birthday card from the King! 🎂");
@@ -78,7 +78,7 @@ if(ages === 100) {
 
 let cards = [7, 3, 9];
 
-for(let i = 0; i < cards.length; i++) {
+for (let i = 0; i < cards.length; i++) {
     console.log(cards[i]);
 }
 
@@ -92,7 +92,7 @@ console.log(randonNumber);
 let flooredNumber = Math.floor(4);
 console.log(flooredNumber);
 
-let randon = Math.floor( Math.random() * 6) + 1
+let randon = Math.floor(Math.random() * 6) + 1
 
 console.log(randon)
 
@@ -100,7 +100,23 @@ console.log(randon)
 
 function rollDice() {
     let roll = Math.floor(Math.random() * 6) + 1;
-    return roll 
+    return roll
 }
 
 rollDice();
+
+// TEMPLATE STRINGS
+
+const recipient = "James";
+const sender = "Lucas";
+
+const email =
+
+`Hey ${recipient}!
+
+How is it going?
+
+Cheers ${sender}
+`
+
+console.log(email)
