@@ -3,20 +3,21 @@ const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el")
 let inputBtn = document.getElementById("input-btn")
 
-//localStorage.setItem("myLeads", "https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal")
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
-let name = localStorage.getItem("myLeads")
-
-console.log(name)
-
+if (leadsFromLocalStorage) {
+    myLeads = leadsFromLocalStorage
+    renderItems()
+}
 
 inputBtn.addEventListener("click", function () {
     if (inputEl.value === "") {
-        alert = "Write something"
+        alert ("Write something")
     } else {
         myLeads.push(inputEl.value)
-        renderItems()
         inputEl.value = ""
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        renderItems()
     }
 })
 
@@ -26,11 +27,16 @@ function renderItems() {
 
     for (let i = 0; i < myLeads.length; i++) {
         listItems += `<li> 
-        <a target= '_blank' href='>${myLeads[i]}'>
+        <a target='_blank' href='${myLeads[i]}'>
         ${myLeads[i]}
         </a>
          </li>`
     }
 
     ulEl.innerHTML = listItems
+}
+
+function deletar() {
+    localStorage.clear("myLeads")
+    ulEl.innerHTML = ""
 }
