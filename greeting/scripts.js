@@ -1,11 +1,7 @@
-let sentence = ["Hello", "my", "name", "is", "Lucas", "and ", "I", "am", "learning", "JavaScript!"];
-let greetingEl = document.getElementById("greeting-el");
+const welcome = document.getElementById("greeting-el")
 
-function create() {
-    for(let i = 0; i < sentence.length; i++) {
-        greetingEl.textContent += sentence[i] + " "
-    }
+function greetUser(greeting) {
+    welcome.textContent = `${greeting}, Per Harald Borgen`
 }
 
-
-create();
+greetUser("WELCOMEEEE");
