@@ -3,6 +3,7 @@ const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el")
 let inputBtn = document.getElementById("input-btn")
 const deletar = document.querySelector(".delete");
+const tabBtn = document.querySelector(".save")
 
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
@@ -10,6 +11,19 @@ if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
     renderItems(myLeads)
 }
+
+tabBtn.addEventListener("click", function () {
+    if (inputEl.value === "") {
+        alert("Write something")
+    } else {
+        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+            myLeads.push(tabs[0].url)
+            inputEl.value = ""
+            localStorage.setItem("myLeads", JSON.stringify(myLeads))
+            renderItems(myLeads)
+        })
+    }
+})
 
 function renderItems(leads) {
 
