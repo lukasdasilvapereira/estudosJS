@@ -13,16 +13,13 @@ if (leadsFromLocalStorage) {
 }
 
 tabBtn.addEventListener("click", function () {
-    if (inputEl.value === "") {
-        alert("Write something")
-    } else {
-        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-            myLeads.push(tabs[0].url)
-            inputEl.value = ""
-            localStorage.setItem("myLeads", JSON.stringify(myLeads))
-            renderItems(myLeads)
-        })
-    }
+
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        myLeads.push(tabs[0].url)
+        inputEl.value = ""
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        renderItems(myLeads)
+    })
 })
 
 function renderItems(leads) {
@@ -48,13 +45,9 @@ deletar.addEventListener("dblclick", function () {
 
 
 inputBtn.addEventListener("click", function () {
-    if (inputEl.value === "") {
-        alert("Write something")
-    } else {
-        myLeads.push(inputEl.value)
-        inputEl.value = ""
-        localStorage.setItem("myLeads", JSON.stringify(myLeads))
-        renderItems(myLeads)
-    }
+    myLeads.push(inputEl.value)
+    inputEl.value = ""
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    renderItems(myLeads)
 })
 

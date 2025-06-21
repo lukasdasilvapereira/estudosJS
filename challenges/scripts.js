@@ -112,7 +112,7 @@ const sender = "Lucas";
 
 const email =
 
-`Hey ${recipient}!
+    `Hey ${recipient}!
 
 How is it going?
 
@@ -120,3 +120,4 @@ Cheers ${sender}
 `
 
 console.log(email)
+

@@ -101,3 +101,30 @@ function getHand2() {
 console.log(getHand1())
 console.log(getHand2())
 
+// SETTING THE STAGE 
+
+const player = "Lucas"
+const opponent = "Nick"
+const game = "AmazingFighter"
+let points = 0;
+let hasWon = false;
+
+points += 100
+hasWon = true
+
+if(hasWon) {
+    console.log(`${player} got ${points} points and won the ${game} game`)
+} else {
+    console.log(`The winner is ${opponent}! ${player} lost`)
+}
+
+let myCourses = ["Learn Css Animations", "UI Design Fundamentals", "Intro to Clean Code"]
+
+
+function array(arr) {
+    for(let i = 0; i < arr.length; i++) {
+        console.log(arr[i])
+    }
+}
+
+array(myCourses)
