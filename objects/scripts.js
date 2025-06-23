@@ -67,3 +67,14 @@ console.log(fruits)
 
 fruits.forEach(fruit => console.log(fruit.name))
 
+const fruitName = fruits.map(fruit => fruit.name)
+
+const fruitColors = fruits.map(fruit => fruit.color)
+
+console.log(fruitName)
+console.log(fruitColors)
+
+const yellowFruits = fruits.filter(fruit => fruit.color === "yellow")
+
+console.log(yellowFruits)
+
