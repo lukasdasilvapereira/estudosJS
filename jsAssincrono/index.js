@@ -38,3 +38,14 @@ function boaTarde(boa) {
 bomDia(() => {
     boaTarde("Boa tarde!")
 })
+
+function hello(callback) {
+    console.log("Hello!")
+    callback()
+}
+
+function goodBye() {
+    console.log("Goodbye!")
+}
+
+hello(goodBye)
